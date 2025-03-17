@@ -8,7 +8,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 app.use(cors())
 app.use(express.json());
-
+console.log(process.env)
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 
 app.post("/calories", async (req, res) => {
